@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Outdoor Fan Vest - Tetap Sejuk Saat Beraktivitas Luar Ruangan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#003366',
+                        secondary: '#0066cc',
+                        accent: '#ff6b6b',
+                        skyblue: '#87ceeb',
+                        foamy: '#f0f8ff'
+                    },
+                    fontFamily: {
+                        heading: ['Playfair Display', 'serif'],
+                        body: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(0,51,102,0.8) 0%, rgba(135,206,235,0.3) 100%);
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+        }
+        .size-guide-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 0.75rem;
+        }
+        .lightbox {
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+        .lightbox:hover {
+            transform: scale(1.02);
+        }
+        .featherlight {
+            background-color: rgba(0,0,0,0.8) !important;
+        }
+        .social-proof-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        .animate-pulse-slow {
+            animation: pulse-slow 4s infinite;
+        }
+        @keyframes pulse-slow {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+        .slide-in {
+            animation: slideIn 0.5s ease-out forwards;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-foamy font-body text-gray-800">
+    <!-- Floating CTA Button -->
+    <div class="fixed bottom-5 right-5 z-50 animate-pulse-slow">
+        <button class="bg-accent hover:bg-secondary rounded-full py-4 px-6 text-white font-semibold shadow-xl transform transition-all ease-in-out duration-300 hover:scale-105 focus:outline-none" onclick="scrollToOrder()">
+            <span class="flex items-center">
+                <span class="hidden sm:block">🔥 PESAN SEKARANG</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14v6m-3-3h6M6 10h2a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2zm10 0a2 2 0 002-2V6a2 2 0 00-2-2h-2a2 2 0 00-2 2v2a2 2 0 002 2zM6 20a2 2 0 002-2v-2a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2z" />
+                </svg>
+            </span>
+        </button>
+    </div>
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-40 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <div>
+                    <a href="#" class="text-xl md:text-2xl font-heading font-semibold text-primary">Men's Clothing</a>
+                </div>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#fitur" class="text-gray-700 hover:text-secondary font-medium">Fitur</a>
+                    <a href="#benefits" class="text-gray-700 hover:text-secondary font-medium">Keunggulan</a>
+                    <a href="#gallery" class="text-gray-700 hover:text-secondary font-medium">Gallery</a>
+                    <a href="#testimonials" class="text-gray-700 hover:text-secondary font-medium">Testimonial</a>
+                    <a href="#order" class="bg-primary hover:bg-secondary text-white px-5 py-2 rounded-md font-medium">Order</a>
+                </nav>
+                <button class="md:hidden text-gray-700 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden parallax" style="background-image: url('https://cdn.wshopon.com/image/029b54c9f40d2c8baf9a1c974eaa0a9dbb0a7aca.jpeg');">
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="relative py-24 lg:py-32 container mx-auto px-4 text-white">
+            <div class="max-w-3xl">
+                <p class="text-xs uppercase font-semibold tracking-wider text-accent mb-2">Vest dengan Teknologi Kipas Mini</p>
+                <h1 class="text-4xl lg:text-6xl font-heading font-bold mb-6">Men's Outdoor Fan Vest</h1>
+                <p class="text-lg lg:text-xl mb-8 font-medium">Tetap nyaman dan segar sepanjang aktivitas luar ruangan tanpa terganggu panas.</p>
+                <div class="flex flex-wrap gap-4 mb-10">
+                    <div class="glass-effect py-3 px-6 text-center rounded-lg">
+                        <span class="block text-2xl font-bold font-heading">Rp245.000</span>
+                        <span class="line-through text-sm">Rp479.000</span>
+                    </div>
+                    <div class="glass-effect py-3 px-6 text-center rounded-lg">
+                        <span class="block text-sm uppercase font-medium mb-1">Garansi</span>
+                        <span class="block font-semibold">1 Minngu</span>
+                    </div>
+                    <div class="glass-effect py-3 px-6 text-center rounded-lg">
+                        <span class="block text-sm uppercase font-medium mb-1">Gratis</span>
+                        <span class="block font-semibold">Ongkos Kirim</span>
+                    </div>
+                </div>
+                <div class="flex flex-wrap gap-4">
+                    <button class="bg-accent hover:bg-secondary text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300 transform hover:scale-105" onclick="scrollToOrder()">BELI SEKARANG</button>
+                    <button class="bg-white bg-opacity-20 hover:bg-opacity-30 backdrop-blur-sm text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300 flex items-center" onclick="scrollToFeatures()">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                        </svg>
+                        VIDEO DEMO
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary to-transparent h-32"></div>
+    </section>
+
+    <!-- Section: Solution Statement -->
+    <section class="py-16 bg-foamy">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto text-center">
+                <div class="bg-primary text-white py-1 px-8 rounded-full inline-block mb-6">
+                    <p class="uppercase text-sm font-semibold">Solusi Untuk Aktivitas Luar Ruang</p>
+                </div>
+                <h2 class="text-3xl lg:text-4xl font-heading font-bold mb-6">Lewati Hari Panas Dengan Kenyamanan Maksimal</h2>
+                <p class="text-lg mb-8 max-w-3xl mx-auto">
+                    Men's Outdoor Fan Vest dirancang khusus untuk menghadapi cuaca panas saat bekerja lapangan, berkendara motor, hiking, atau aktivitas outdoor lainnya. Dengan teknologi kipas mini terbaru, Anda dapat bekerja lebih lama tanpa merasa gerah berlebihan.
+                </p>
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <div class="text-center mx-auto mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto text-secondary" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-heading font-semibold mb-4">Garansi Kepuasan 100%</h3>
+                    <p class="mb-4">
+                        Jika Anda tidak puas dengan produk dalam 30 hari pertama, toko kami akan mengembalikan uang Anda tanpa pertanyaan. Kami yakin Anda akan menyukai kenyamanan produk ini!
+                    </p>
+                    <div class="border-t border-gray-200 pt-4 mt-6">
+                        <p class="font-medium">Kartini Wijaya, Pemilik Men's Clothing</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Features -->
+    <section id="fitur" class="py-16 bg-gradient-to-b from-foamy to-skyblue">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl lg:text-4xl font-heading font-bold mb-4">Fitur Unggulan Men's Outdoor Fan Vest</h2>
+                <p class="text-lg">Teknologi cooling yang inovatif untuk aktivitas outdoor</p>
+            </div>
+            
+            <div class="feature-grid mb-16">
+                <div class="bg-white rounded-xl shadow-lg p-6 slide-in" style="animation-delay: 0.1s">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-primary bg-opacity-10 p-3 rounded-full text-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18H9a3 3 0 01-1.025-5.769l.553-.553z" />
+                            </svg>
+                        </div>
+                        <h3 class="ml-4 text-xl font-semibold">2 Kipas Mini</h3>
+                    </div>
+                    <p>Dua kipas mini dengan teknologi tinggi untuk sirkulasi udara yang optimal dan pengurangan panas tubuh.</p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-6 slide-in" style="animation-delay: 0.2s">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-primary bg-opacity-10 p-3 rounded-full text-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <h3 class="ml-4 text-xl font-semibold">Bahan Breathable</h3>
+                    </div>
+                    <p>Terbuat dari kain polyester khusus yang cepat kering dan nyaman digunakan saat beraktivitas.</p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-6 slide-in" style="animation-delay: 0.3s">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-primary bg-opacity-10 p-3 rounded-full text-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                            </svg>
+                        </div>
+                        <h3 class="ml-4 text-xl font-semibold">Kontroller USB</h3>
+                    </div>
+                    <p>Kontrol pengaturan kecepatan dengan mudah, bisa diisi ulang menggunakan power bank melalui USB.</p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-6 slide-in" style="animation-delay: 0.4s">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-primary bg-opacity-10 p-3 rounded-full text-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="ml-4 text-xl font-semibold">Multifungsi</h3>
+                    </div>
+                    <p>Kantong multifungsi untuk menyimpan barang penting Anda saat beraktivitas.</p>
+                </div>
+            </div>
+            
+          
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-heading font-bold mb-4">Pengalaman Penggunaan Nyata</h3>
+                    <p class="mb-6">Men's Outdoor Fan Vest memberikan sensasi kesejukan instan saat Anda berada di luar ruangan dalam cuaca panas. Dengan dua kipas berdaya tinggi yang menempel pada bagian punggung vest, angin yang dihasilkan akan langsung menyentuh kulit dan membantu menguapkan keringat dengan cepat.</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mt-1 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Sensasi sejuk sepanjang hari dengan kecepatan angin yang bisa disesuaikan</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mt-1 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Desain ergonomis yang nyaman dipakai untuk berbagai bentuk tubuh</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mt-1 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Penggunaan daya yang rendah dengan usia baterai hingga 8 jam</span>
+                        </li>
+                    </ul>
+                    <button class="bg-primary hover:bg-secondary text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300 transform hover:scale-105" onclick="scrollToOrder()">DAPATKAN SEKARANG</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-16 bg-primary">
+        <div class="container mx-auto px-4">
+            <div class="text-center text-white mb-12">
+                <h2 class="text-3xl lg:text-4xl font-heading font-bold mb-4">Rasakan Kesegaran Dengan Men's Outdoor Fan Vest</h2>
+                <p class="text-skyblue max-w-2xl mx-auto">Solusi terbaik untuk pengojek motor, pekerja lapangan, pengendara motor, dan aktivitas outdoor lainnya</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="lightbox">
+                    <img src="https://cdn.wshopon.com/image/1c5e2510abd817c7da306cf6b68a653d689bb6c6.jpeg" alt="Fan Vest Terpakai" class="w-full h-64 lg:h-80 object-cover rounded-xl">
+                </div>
+                <div class="lightbox">
+                    <img src="https://cdn.wshopon.com/image/6372231c709f86fefd16cc701c7675dbd81608b1.jpeg" alt="Kipas Mini" class="w-full h-64 lg:h-80 object-cover rounded-xl">
+                </div>
+                <div class="lightbox">
+                    <img src="https://cdn.wshopon.com/image/c2df857621dc4571c270374601d944432041357f.jpeg" alt="Model Pakai Rompi" class="w-full h-64 lg:h-80 object-cover rounded-xl">
+                </div>
+                <div class="lightbox">
+                    <img src="https://cdn.wshopon.com/image/6afa0e96edd6ba0e9784c41461c6eb5e384c6539.jpeg" alt="Tampilan Depan" class="w-full h-64 lg:h-80 object-cover rounded-xl">
+                </div>
+                <div class="lightbox">
+                    <img src="https://cdn.wshopon.com/image/9e8da6b3bc21b268ad00040c62dd303903b4d933.jpeg" alt="Kemasan Produk" class="w-full h-64 lg:h-80 object-cover rounded-xl">
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Size Guide Section -->
+    <section id="benefits" class="py-16 bg-foamy">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl lg:text-4xl font-heading font-bold mb-4">Panduan Ukuran</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Pastikan ukuran yang sesuai dengan badan Anda</p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full bg-white">
+                            <thead>
+                                <tr class="bg-primary text-white">
+                                    <th class="py-3 px-4 text-left">Ukuran</th>
+                                    <th class="py-3 px-4 text-left">Lebar Bahu</th>
+                                    <th class="py-3 px-4 text-left">Panjang Badan</th>
+                                    <th class="py-3 px-4 text-left">Lingkar Dada</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="py-3 px-4">M</td>
+                                    <td class="py-3 px-4">46 cm</td>
+                                    <td class="py-3 px-4">72 cm</td>
+                                    <td class="py-3 px-4">100 cm</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="py-3 px-4">L</td>
+                                    <td class="py-3 px-4">48 cm</td>
+                                    <td class="py-3 px-4">74 cm</td>
+                                    <td class="py-3 px-4">112 cm</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="py-3 px-4">XL</td>
+                                    <td class="py-3 px-4">50 cm</td>
+                                    <td class="py-3 px-4">76 cm</td>
+                                    <td class="py-3 px-4">114 cm</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="py-3 px-4">XXL</td>
+                                    <td class="py-3 px-4">53 cm</td>
+                                    <td class="py-3 px-4">78 cm</td>
+                                    <td class="py-3 px-4">116 cm</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4">XXXL</td>
+                                    <td class="py-3 px-4">53 cm</td>
+                                    <td class="py-3 px-4">78 cm</td>
+                                    <td class="py-3 px-4">120 cm</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h3 class="text-xl font-semibold mb-4">Tips Memilih Ukuran</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="flex items-start">
+                                <div class="mr-3 mt-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Ukuran Terbaik</h4>
+                                    <p class="text-sm">Untuk hasil terbaik, pilih ukuran sesuai lingkar dada Anda dengan toleransi +5cm dari ukuran tubuh Anda</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="mr-3 mt-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Ukuran Oversize</h4>
+                                    <p class="text-sm">Jika Anda menyukai model yang longgar, pilih satu ukuran lebih besar dari ukuran lingkar dada Anda</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-gradient-to-t from-foamy to-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-heading font-bold mb-4">Apa Kata Pengguna?</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Pengalaman nyata dari ribuan pelanggan kami</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="social-proof-card bg-white rounded-xl shadow-lg p-6 transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full mr-4">
+                            <img src="https://randomuser.me/api/portraits/men/54.jpg" class="w-full h-full rounded-full object-cover" alt="User">
+                        </div>
+                        <div>
+                            <h3 class="font-semibold">Budi Setiawan</h3>
+                            <div class="flex text-yellow-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"Sebagai pengojek motor sehari-hari di Jakarta, vest ini sangat membantu mengurangi gerah di tengah kemacetan. Udara dari kipas kecilnya langsung membuat tubuh terasa segar."</p>
+                </div>
+                
+                <div class="social-proof-card bg-white rounded-xl shadow-lg p-6 transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full mr-4">
+                            <img src="https://randomuser.me/api/portraits/men/61.jpg" class="w-full h-full rounded-full object-cover" alt="User">
+                        </div>
+                        <div>
+                            <h3 class="font-semibold">Hadi Pranoto</h3>
+                            <div class="flex text-yellow-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"Saya teknisi lapangan HVAC dan sering bekerja di ruangan mesin yang panas. Setelah menggunakan rompi ini, saya tidak lagi terganggu panas berlebih karena angin dari kipas membantu menjaga suhu tubuh normal."</p>
+                </div>
+                
+                <div class="social-proof-card bg-white rounded-xl shadow-lg p-6 transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full mr-4">
+                            <img src="https://randomuser.me/api/portraits/men/82.jpg" class="w-full h-full rounded-full object-cover" alt="User">
+                        </div>
+                        <div>
+                            <h3 class="font-semibold">Rudi Hartono</h3>
+                            <div class="flex text-yellow-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-300" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"Saya menggunakan vest ini untuk motocross. Sangat membantu menjaga tubuh tetap sejuk selama balapan berjam-jjam di cuaca panas. Daya baterai juga cukup lama."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section id="order" class="py-16 bg-gradient-to-r from-primary to-secondary relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0 bg-gray-200 bg-[length:100px_100px]" style="background-image: url("https://cdn.wshopon.com/image/029b54c9f40d2c8baf9a1c974eaa0a9dbb0a7aca.jpeg");"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative">
+            <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden">
+                <div class="md:flex items-stretch">
+                    <div class="p-8 md:p-12 md:w-1/2">
+                        <div class="text-center mb-8">
+                            <h2 class="text-3xl lg:text-4xl font-heading font-bold mb-2 text-primary">PROMO HARI INI!</h2>
+                            <p class="text-gray-600 mb-4">Pesan sekarang dan dapatkan harga spesial!</p>
+                            <div class="flex justify-center gap-2 mb-6">
+                                <div class="bg-gray-100 rounded-lg p-4 text-center">
+                                    <span class="block text-xl font-bold text-accent">Rp245.000</span>
+                                    <span class="text-sm text-gray-500">Harga Promo</span>
+                                </div>
+                                <div class="bg-gray-100 rounded-lg p-4 text-center">
+                                    <span class="block text-xl font-bold line-through text-gray-500">Rp479.000</span>
+                                    <span class="text-sm text-gray-500">Harga Normal</span>
+                                </div>
+                            </div>
+                            <div class="bg-accent bg-opacity-10 border-2 border-accent rounded-lg p-3 mb-6">
+                                <p class="text-base font-semibold text-gray-800">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent inline-block mr-1" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
+                                    </svg>
+                                    Promo hanya berlaku untuk hari ini
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-accent mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900">Garansi Kepuasan Pelanggan</h3>
+                                <p class="text-gray-600">Uang kembali dalam 7 hari jika Anda tidak puas</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center mb-8">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-accent mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                            </svg>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900">Pengiriman Kilat</h3>
+                                <p class="text-gray-600">Pesanan sampai dalam 2-3 hari kerja</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="p-8 md:p-12 md:w-1/2 bg-gradient-to-br from-skyblue to-foamy">
+                        <div class="text-center mb-6">
+                            <h3 class="text-2xl font-heading font-semibold text-primary">Form Pembelian</h3>
+                            <p class="text-gray-600">Isi data dengan benar untuk proses pemesanan</p>
+                        </div>
+                        
+                        <!-- OrderOnline Embed Code - v8.0.4 --> <div class="ooef"> <form class="orderonline-embed-form" data-username="vera" data-product-slug="mens-outdoor-fan-vest" data-product-id="686f89c510ba6197b10d0758" id="oo-embed-form-mens-outdoor-fan-vest-792" data-origin="orderonline"> <div class="ooef-loader"><style>.ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}@keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}@-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}.ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}.ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}.ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}@-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}@keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}</style><div aria-live="polite" role="status"><div>Loading...</div></div></div> </form> </div> <script> if (typeof xLogError != 'function') { var xLogError = function (error) { var req = new XMLHttpRequest(); var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error.stack }); var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error'; req.open('POST', 'https://api.orderonline.id/log', true); req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded'); req.send(params); }; } try { if (typeof xEmbedScript != 'function') { var xEmbedScript = function () { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js'); }; } if (typeof xEmbedInit != 'function') { var xEmbedInit = function (w, n) { if (w.ooe) return; n = w.ooe = function() { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!w._ooe) w._ooe = n; n.push = n;n.loaded = !0;n.version = '8.0.4';n.queue = []; }; } xEmbedInit(window); ooe('setup', 'redirect', 'https://vera.orderonline.id'); ooe('init', '5f1a7807a9bf807d6c63d963', '686f89c510ba6197b10d0758', '686f89c510ba6197b10d0759', 'oo-embed-form-mens-outdoor-fan-vest-792', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":true,"triggerGtm":true}); if (!window.jQuery) { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; t.addEventListener('load', xEmbedScript); s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery'); } else { xEmbedScript(); } } catch (e) { xLogError(e); throw e; } </script> <!-- End OrderOnline Embed Code -->
+</body>
+</html>
